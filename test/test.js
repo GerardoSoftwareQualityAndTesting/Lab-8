@@ -44,3 +44,17 @@ describe('givenTwoWhenConvertingToOctalThenTwo', function () {
     assert.strictEqual(expectedResult, actualResult);
   })
 })
+
+describe('givenEightWhenConvertingToOctalThenTen', function () {
+  it('decToOctal(8) = 10', () => {
+    // Given
+    var dec = 8;
+    var expectedResult = 10;
+
+    // When
+    var actualResult = octalFunctions.decToOctal(dec);
+
+    // Then
+    assert.strictEqual(expectedResult, actualResult);
+  })
+})
