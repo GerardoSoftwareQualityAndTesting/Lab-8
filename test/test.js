@@ -2,7 +2,7 @@ var assert = require('assert');
 var javascriptFunctions = require('../javascriptFunctions');
 var octalFunctions = require('../OctalConverter')
 
-describe('givenTwoIntegersWhenSuThenSuccess', function () {
+describe('givenTwoIntegersWhenSumThenSuccess', function () {
   it('sum(1, 2) = 3', () => {
     // Given
     var a = 1;
@@ -50,6 +50,20 @@ describe('givenEightWhenConvertingToOctalThenTen', function () {
     // Given
     var dec = 8;
     var expectedResult = 10;
+
+    // When
+    var actualResult = octalFunctions.decToOctal(dec);
+
+    // Then
+    assert.strictEqual(expectedResult, actualResult);
+  })
+})
+
+describe('given95WhenConvertingToOctalThen137', function () {
+  it('decToOctal(95) = 137', () => {
+    // Given
+    var dec = 95;
+    var expectedResult = 137;
 
     // When
     var actualResult = octalFunctions.decToOctal(dec);
