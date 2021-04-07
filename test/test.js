@@ -72,3 +72,17 @@ describe('given95WhenConvertingToOctalThen137', function () {
     assert.strictEqual(expectedResult, actualResult);
   })
 })
+
+describe('given2048WhenConvertingToOctalThen4000', function () {
+  it('decToOctal(2048) = 4000', () => {
+    // Given
+    var dec = 2048;
+    var expectedResult = 4000;
+
+    // When
+    var actualResult = octalFunctions.decToOctal(dec);
+
+    // Then
+    assert.strictEqual(expectedResult, actualResult);
+  })
+})
